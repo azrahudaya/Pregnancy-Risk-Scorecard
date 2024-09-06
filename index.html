@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartu Skor Perencanaan Persalinan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-semibold text-center text-gray-700 mb-6">
+          Kartu Skor Perencanaan Persalinan
+        </h1>
+        <form
+          id="birthPlanningForm"
+          action="result.html"
+          method="get"
+          class="space-y-6"
+        >
+          <h2 class="text-xl font-semibold text-gray-700">
+            Informasi Kehamilan Pertama
+          </h2>
+
+          <div class="space-y-4">
+            <label for="ageFirstPregnancy" class="block text-gray-600"
+              >Berapa umur Anda saat pertama kali hamil (tahun):</label
+            >
+            <input
+              type="number"
+              id="ageFirstPregnancy"
+              name="ageFirstPregnancy"
+              required
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+
+            <label for="currentPregnancyOver35" class="block text-gray-600"
+              >Apakah Anda saat ini sedang hamil di usia lebih dari 35
+              tahun?</label
+            >
+            <select
+              id="currentPregnancyOver35"
+              name="currentPregnancyOver35"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+
+            <label for="yearsSinceFirstPregnancy" class="block text-gray-600"
+              >Berapa tahun setelah menikah sebelum Anda hamil pertama kali
+              (tahun):</label
+            >
+            <input
+              type="number"
+              id="yearsSinceFirstPregnancy"
+              name="yearsSinceFirstPregnancy"
+              required
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          <h2 class="text-xl font-semibold text-gray-700">
+            Riwayat Kehamilan Sebelumnya
+          </h2>
+          <div class="space-y-4">
+            <label for="failedPregnancy" class="block text-gray-600"
+              >Pernah mengalami keguguran?</label
+            >
+            <select
+              id="failedPregnancy"
+              name="failedPregnancy"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+
+            <label class="block text-gray-600">Pernah melahirkan dengan:</label>
+            <div class="space-y-2">
+              <div>
+                <input
+                  type="checkbox"
+                  id="forceps"
+                  name="forceps"
+                  value="4"
+                  class="mr-2"
+                />
+                <label for="forceps" class="text-gray-600"
+                  >Bantuan tang/vakum</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="manualPlacenta"
+                  name="manualPlacenta"
+                  value="4"
+                  class="mr-2"
+                />
+                <label for="manualPlacenta" class="text-gray-600"
+                  >Tindakan manual untuk mengeluarkan plasenta</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="infusionTransfusion"
+                  name="infusionTransfusion"
+                  value="4"
+                  class="mr-2"
+                />
+                <label for="infusionTransfusion" class="text-gray-600"
+                  >Diberikan infus atau transfusi darah</label
+                >
+              </div>
+            </div>
+
+            <label for="caesarean" class="block text-gray-600"
+              >Pernah operasi sesar?</label
+            >
+            <select
+              id="caesarean"
+              name="caesarean"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="8">Ya</option>
+            </select>
+          </div>
+
+          <h2 class="text-xl font-semibold text-gray-700">
+            Kesehatan Ibu Saat Ini
+          </h2>
+          <div class="space-y-4">
+            <label class="block text-gray-600"
+              >Apakah Anda mengalami salah satu penyakit berikut?</label
+            >
+            <div class="space-y-2">
+              <div>
+                <input
+                  type="checkbox"
+                  id="anemia"
+                  name="anemia"
+                  value="2"
+                  class="mr-2"
+                />
+                <label for="anemia" class="text-gray-600"
+                  >Kurang darah (anemia)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="malaria"
+                  name="malaria"
+                  value="2"
+                  class="mr-2"
+                />
+                <label for="malaria" class="text-gray-600">Malaria</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="tbc"
+                  name="tbc"
+                  value="2"
+                  class="mr-2"
+                />
+                <label for="tbc" class="text-gray-600">TBC paru</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="heartDisease"
+                  name="heartDisease"
+                  value="2"
+                  class="mr-2"
+                />
+                <label for="heartDisease" class="text-gray-600"
+                  >Gangguan jantung</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="diabetes"
+                  name="diabetes"
+                  value="4"
+                  class="mr-2"
+                />
+                <label for="diabetes" class="text-gray-600"
+                  >Kencing manis (diabetes)</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="std"
+                  name="std"
+                  value="4"
+                  class="mr-2"
+                />
+                <label for="std" class="text-gray-600"
+                  >Penyakit menular seksual</label
+                >
+              </div>
+            </div>
+
+            <label for="swelling" class="block text-gray-600"
+              >Bengkak pada wajah atau kaki dan tekanan darah tinggi?</label
+            >
+            <select
+              id="swelling"
+              name="swelling"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+          </div>
+
+          <h2 class="text-xl font-semibold text-gray-700">
+            Kondisi Kehamilan Saat Ini
+          </h2>
+          <div class="space-y-4">
+            <label for="multiplePregnancy" class="block text-gray-600"
+              >Hamil anak kembar?</label
+            >
+            <select
+              id="multiplePregnancy"
+              name="multiplePregnancy"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+
+            <label for="hydramnion" class="block text-gray-600"
+              >Apakah ada terlalu banyak cairan ketuban (Hydramnion)?</label
+            >
+            <select
+              id="hydramnion"
+              name="hydramnion"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+
+            <label for="stillbirth" class="block text-gray-600"
+              >Apakah pernah bayi mati dalam kandungan sebelumnya?</label
+            >
+            <select
+              id="stillbirth"
+              name="stillbirth"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+
+            <label for="overdue" class="block text-gray-600"
+              >Apakah kehamilan ini lebih dari 9 bulan (lebih bulan)?</label
+            >
+            <select
+              id="overdue"
+              name="overdue"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="4">Ya</option>
+            </select>
+
+            <label for="breech" class="block text-gray-600"
+              >Apakah posisi bayi sungsang?</label
+            >
+            <select
+              id="breech"
+              name="breech"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="8">Ya</option>
+            </select>
+
+            <label for="transverse" class="block text-gray-600"
+              >Apakah posisi bayi lintang?</label
+            >
+            <select
+              id="transverse"
+              name="transverse"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="8">Ya</option>
+            </select>
+
+            <label for="bleeding" class="block text-gray-600"
+              >Apakah ada perdarahan selama kehamilan ini?</label
+            >
+            <select
+              id="bleeding"
+              name="bleeding"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="8">Ya</option>
+            </select>
+
+            <label for="preeclampsia" class="block text-gray-600"
+              >Pernah mengalami preeklampsia atau kejang-kejang?</label
+            >
+            <select
+              id="preeclampsia"
+              name="preeclampsia"
+              class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              <option value="0">Tidak</option>
+              <option value="8">Ya</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700"
+          >
+            Hitung Skor
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

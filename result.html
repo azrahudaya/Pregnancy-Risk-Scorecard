@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Skor Perencanaan Persalinan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-semibold text-center text-gray-700 mb-6">
+          Hasil Kartu Skor
+        </h1>
+
+        <div id="result" class="space-y-4 text-center">
+          <!-- Hasil Skor akan disuntikkan oleh JavaScript -->
+          <h2 class="text-xl font-bold text-gray-800">Skor Anda:</h2>
+          <p class="text-lg font-semibold text-indigo-600" id="score">0</p>
+          <h3 class="text-xl font-bold text-gray-800">Status Kehamilan:</h3>
+          <p class="text-lg font-semibold text-indigo-600" id="status">-</p>
+
+          <!-- Penjelasan berdasarkan hasil skor -->
+          <div id="explanation" class="text-left text-gray-700 mt-6">
+            <!-- Penjelasan akan disuntikkan oleh JavaScript -->
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <button
+            onclick="window.history.back()"
+            class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700"
+          >
+            Hitung Ulang
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/javascript.js"></script>
+  </body>
+</html>
